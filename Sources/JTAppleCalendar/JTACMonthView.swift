@@ -217,13 +217,13 @@ open class JTACMonthView: UICollectionView {
     }
 }
 
-extension JTACMonthView {
-    /// A semantic description of the view’s contents, used to determine whether the view should be flipped when switching between left-to-right and right-to-left layouts.
-    open override var semanticContentAttribute: UISemanticContentAttribute {
-        didSet {
-            var superviewIsRTL =  false
-            if let validSuperView = superview?.effectiveUserInterfaceLayoutDirection { superviewIsRTL = validSuperView == .rightToLeft && semanticContentAttribute == .unspecified }
-            transform.a = semanticContentAttribute == .forceRightToLeft || superviewIsRTL ? -1: 1
-        }
-    }
-}
+// extension JTACMonthView {
+//     /// A semantic description of the view’s contents, used to determine whether the view should be flipped when switching between left-to-right and right-to-left layouts.
+//     open override var semanticContentAttribute: UISemanticContentAttribute {
+//         didSet {
+//             var superviewIsRTL =  false
+//             if let validSuperView = superview?.effectiveUserInterfaceLayoutDirection { superviewIsRTL = validSuperView == .rightToLeft && semanticContentAttribute == .unspecified }
+//             transform.a = semanticContentAttribute == .forceRightToLeft || superviewIsRTL ? -1: 1
+//         }
+//     }
+// }
